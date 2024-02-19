@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "weather_forecast_backend": {
+      "candid": "src/weather_forecast_backend/weather_forecast_backend.did",
+      "package": "weather_forecast_backend",
+      "type": "rust"
+    },
+    "weather_forecast_frontend": {
+      "dependencies": [
+        "weather_forecast_backend"
+      ],
+      "source": [
+        "src/weather_forecast_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "weather_forecast_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,19 @@
+type WeatherState = {
+  temperature: int;
+  pressure: int;
+  humidity: int;
+  wind_speed: int;
+};
+
+service : {
+  new: (int, int, int, int) -> ();
+  set_weather_data: (int, int, int, int) -> ();
+  get_temperature: () -> (int);
+  get_pressure: () -> (int);
+  get_humidity: () -> (int);
+  get_wind_speed: () -> (int);
+  update_temperature: (int) -> ();
+  update_pressure: (int) -> ();
+  update_humidity: (int) -> ();
+  update_wind_speed: (int) -> ();
+};
